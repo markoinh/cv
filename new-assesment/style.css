@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+	max-width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: nunito;
+}
+/*Header*/
+header{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	background: #41D3BD;
+	width: 100%;
+}
+
+header img{
+	padding: 0 20px;
+	height: auto;
+	display: block;
+	
+}
+
+nav{
+	padding-right: 20px;
+	
+}
+nav ul li {
+	list-style-type: none;
+	padding-left: 20px;
+	text-align: left;
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+}
+nav ul li a:hover{
+	color: #000000;
+	
+}
+section .wave{
+	background-image: url("photos/wave-sv.svg");
+	 width: 100%;
+  height: 20vh;
+  background-size: cover;
+}
+
+.hero-box {
+	height: 528px;
+	background-image: url("photos/hero.jpg");
+	background-size: cover;
+	margin: 1%;
+}
+
+.hero-box h1{
+	color: #fff;
+	font-size: 55px;
+	text-align: center;
+	padding-top: 150px;
+	
+}
+.hero-box h2{
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+		
+}
+.col{
+	width: 31.3%;
+	height: 31.3%;
+	margin: 1%;
+	float: left;
+}
+.col img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*TABLET*/
+@media (max-width:768px){
+	.hero-box h1 {
+		font-size: 40px;
+		text-align: center;
+		
+		
+	}
+	.hero-box h2{
+		font-size: 25px;
+		
+	}
+	
+	.col {
+		width: 48%;
+	}
+	nav ul li{
+		display: block;
+	}
+}
+
+
+/*MOBILE*/
+@media (max-width:400px){
+	.hero-box h1 {
+		font-size: 28px;
+	}
+	.hero-box h2{
+		font-size: 18px;
+	}
+	.col {
+		width: 98%;
+	}
+}
+
